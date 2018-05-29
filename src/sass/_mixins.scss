@@ -1,3 +1,20 @@
 // SASS MIXINS
 
-$brand-primary: #fff
+@mixin flex($flex, $max-width, $min-width){
+	flex: $flex;
+	max-width: $max-width;
+	min-width: $min-width;
+}
+
+@mixin bgData($bgURL, $bg-size, $bg-pos, $bg-repeat, $z-index){
+	background: $bgURL;
+	background-size: $bg-size;
+	background-position: $bg-pos;
+	background-repeat: $bg-repeat;
+	z-index: $z-index;
+}
+
+@mixin size($width, $height){
+	width: $width;
+	height: $height;
+}

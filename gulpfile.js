@@ -1,8 +1,8 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
-const autoprefixer = require('gulp-autoprefixer')
-
+const autoprefixer = require('gulp-autoprefixer');
+const webserver = require('gulp-webserver');
 
 
 // copy HTML
@@ -34,6 +34,17 @@ gulp.task('minify', function(){
 		.pipe(gulp.dest('views/js'))
 });
 
+// webserver
+
+gulp.task('webserver', function(){
+	gulp.src('views')
+		 .pipe(webserver({
+     	 		livereload: true,
+      			open: true,
+      			port: 4000
+    		}));
+})
+
 
 // watch all files
 
@@ -42,3 +53,7 @@ gulp.task('watch', function(){
 	gulp.watch('src/sass/*.scss', ['sass'])
 	gulp.watch('src/js/*.js', ['minify'])
 });
+
+// set default behavior
+
+gulp.task('default', ['watch', 'webserver'])

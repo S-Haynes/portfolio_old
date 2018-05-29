@@ -2,6 +2,81 @@
 @import 'variables';
 @import 'base';
 
-body {
-	background: $bg-color;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
+/* section 1 */
+.wrapper {
+	@include size(100vw, 50vh)
+	position: relative;
+	margin: 0 auto;
+}
+
+#section-a {
+	position: relative;
+	background: $bg-primary;
+	height: 100vh;
+}
+
+#header-links {
+	width: 30%;
+	float: right;
+	
+}
+
+#brand-logo {
+	float: left;
+	color: white;
+}
+
+#logo-bg {
+	@include size(100%, 100%)
+	@include bgData(url(../img/logo.png), contain, center, no-repeat, 1)
+}
+
+#logo-overlay {
+	@include size(100%, 100%)
+	background: $bg-primary;
+	opacity: 0.7;
+}
+/* end section 1 */
+
+/* begin section 2 */
+#section-b {
+	background: $bg-secondary;
+	height: 75vh;
+}
+
+/* end section 2 */
+
+
+/* begin section 3 */
+#section-c {
+	background: $bg-primary;
+	height: 100vh;
+}
+
+#section-c h1 {
+	color: $bg-secondary;
+}
+
+/* end section 3 */
+
+
+/* begin section 4 */
+#section-d {
+	background: $bg-secondary;
+	height: 75vh;
+}
+
+/*end section 4 */
+
+
+/* begin section 5*/
+#section-e {
+	height: 30vh;
+	background: $bg-primary;
+}
+/* end section 5 */
