@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
 body {
   width: 100%;
   height: 100%;
@@ -6,7 +11,8 @@ body {
   padding: 0;
   font-family: 'Roboto', Helvetica, Arial;
   font-size: 16px;
-  color: #232323; }
+  color: #232323;
+  overflow-x: hidden; }
 
 section {
   width: 100%; }
@@ -16,45 +22,84 @@ h1 {
 
 nav {
   position: relative;
-  display: inline-block;
   width: 100%;
   height: 80px;
-  padding: 20px 0;
+  padding: 20px 10%;
   font-size: 24px;
-  font-weight: 400; }
+  font-weight: 400;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start; }
 
 li {
-  display: inline-block;
-  margin: 20px; }
+  flex: 1;
+  max-width: 30%;
+  min-width: 30%;
+  list-style: none;
+  margin: 0 30px; }
+
+ul {
+  display: flex;
+  justify-content: flex-end; }
 
 a {
   text-decoration: none;
   color: #B0B2C3; }
 
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0; }
+button {
+  outline: none;
+  background: #EF5944;
+  border: none;
+  padding: 10px 30px;
+  font-family: Roboto, Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  color: #f3f3f3;
+  letter-spacing: 3px; }
 
 /* section 1 */
 .wrapper {
-  width: 100vw;
-  height: 50vh;
+  width: 100%;
+  height: 100%;
   position: relative;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.text-container {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  color: #f3f3f3;
+  z-index: 2;
+  line-height: 2.0; }
+
+.text-container h1 {
+  color: #f3f3f3; }
+
+.text-container h3 {
+  margin-bottom: 30px; }
 
 #section-a {
   position: relative;
   background: #1C1D25;
-  height: 100vh; }
+  height: 100vh;
+  width: 100%;
+  height: 1000px; }
 
 #header-links {
-  width: 30%;
-  float: right; }
+  flex: 1;
+  max-width: 50%;
+  min-width: 30%; }
 
 #brand-logo {
-  float: left;
+  flex: 3;
+  max-width: 100%;
+  min-width: 50%;
   color: white; }
 
 #logo-bg {
@@ -67,35 +112,90 @@ a {
   z-index: 1; }
 
 #logo-overlay {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 90%;
   background: #1C1D25;
-  opacity: 0.7; }
+  opacity: 0.6; }
 
 /* end section 1 */
 /* begin section 2 */
 #section-b {
-  background: #f3f3f3;
-  height: 75vh; }
+  background: #f3f3f3; }
+
+.wrapper img {
+  flex: 1;
+  max-width: 30%;
+  min-width: 30%;
+  max-height: 200px;
+  min-height: 200px;
+  margin: 10px; }
 
 /* end section 2 */
 /* begin section 3 */
+.latest-work {
+  max-height: 600px;
+  min-height: 600px;
+  border-right: 10px solid #C7C6C6; }
+
+.wrapper a {
+  max-height: 600px;
+  min-height: 600px;
+  flex: 1;
+  max-width: 100%;
+  min-width: 10%;
+  transition: all 1s; }
+
+.wrapper a:hover {
+  -webkit-box-flex: 6;
+  -ms-flex: 6;
+  flex: 6; }
+
 #section-c {
   background: #1C1D25;
-  height: 100vh; }
+  width: 100%;
+  height: 950px; }
 
 #section-c h1 {
   color: #f3f3f3; }
+
+#section-c .wrapper {
+  top: 20%;
+  max-height: 600px;
+  min-height: 600px; }
+
+#work-1 {
+  background: url(../img/tributepage3.png);
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  z-index: 1; }
+
+#work-2 {
+  background: url(../img/mytwitch3.png);
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  z-index: 1; }
+
+#work-3 {
+  background: url(../img/moviehunt3.png);
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  z-index: 1;
+  border-right: 10px solid black; }
 
 /* end section 3 */
 /* begin section 4 */
 #section-d {
   background: #f3f3f3;
+  width: 100%;
   height: 75vh; }
 
 /*end section 4 */
 /* begin section 5*/
 #section-e {
+  width: 100%;
   height: 30vh;
   background: #1C1D25; }
 

@@ -6,6 +6,11 @@
 	min-width: $min-width;
 }
 
+@mixin height($max-height, $min-height){
+	max-height: $max-height;
+	min-height: $min-height;
+}
+
 @mixin bgData($bgURL, $bg-size, $bg-pos, $bg-repeat, $z-index){
 	background: $bgURL;
 	background-size: $bg-size;
@@ -17,4 +22,10 @@
 @mixin size($width, $height){
 	width: $width;
 	height: $height;
+}
+
+@mixin pos($pos, $top, $left){
+	position: $pos;
+	top: $top;
+	left: $left;
 }

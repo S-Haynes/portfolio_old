@@ -2,32 +2,44 @@
 @import 'variables';
 @import 'base';
 
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
 /* section 1 */
+
 .wrapper {
-	@include size(100vw, 50vh)
+	@include size(100%, 100%)
 	position: relative;
 	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;	
+}
+
+.text-container {
+	@include pos(absolute, 30%, 20%)
+	color: $bg-secondary;
+	z-index: 2;
+	line-height: 2.0;
+}
+
+.text-container h1 {
+	color: $bg-secondary;
+}
+
+.text-container h3 {
+	margin-bottom: 30px;
 }
 
 #section-a {
 	position: relative;
 	background: $bg-primary;
 	height: 100vh;
+	@include size(100%, 1000px)
 }
 
 #header-links {
-	width: 30%;
-	float: right;
-	
+	@include flex(1, 50%, 30%)
 }
 
 #brand-logo {
-	float: left;
+	@include flex(3, 100%, 50%)
 	color: white;
 }
 
@@ -37,29 +49,67 @@
 }
 
 #logo-overlay {
-	@include size(100%, 100%)
+	@include size(80%, 90%)
 	background: $bg-primary;
-	opacity: 0.7;
+	opacity: 0.6;
 }
 /* end section 1 */
 
 /* begin section 2 */
 #section-b {
 	background: $bg-secondary;
-	height: 75vh;
 }
 
+.wrapper img {
+	@include flex(1, 30%, 30%)
+	@include height(200px, 200px)
+	margin: 10px;
+	
+}
 /* end section 2 */
 
 
 /* begin section 3 */
+
+.latest-work {
+@include height(600px, 600px)
+border-right: 10px solid #C7C6C6;
+}
+
+.wrapper a {
+	@include height(600px, 600px)
+	@include flex(1, 100%, 10%)
+	transition: all 1s;
+}
+
+.wrapper a:hover {
+	flex: 6;
+}
 #section-c {
 	background: $bg-primary;
-	height: 100vh;
+	@include size(100%, 950px)
 }
 
 #section-c h1 {
 	color: $bg-secondary;
+}
+
+#section-c .wrapper {
+	top: 20%;
+	@include height(600px, 600px)
+}
+
+#work-1 {
+@include bgData(url(../img/tributepage3.png), cover, left, no-repeat, 1)
+}
+
+#work-2 {
+@include bgData(url(../img/mytwitch3.png), cover, left, no-repeat, 1)
+}
+
+#work-3 {
+@include bgData(url(../img/moviehunt3.png), cover, left, no-repeat, 1)
+border-right: 10px solid black;
 }
 
 /* end section 3 */
@@ -68,15 +118,14 @@
 /* begin section 4 */
 #section-d {
 	background: $bg-secondary;
-	height: 75vh;
+	@include size(100%, 75vh)
 }
-
 /*end section 4 */
 
 
 /* begin section 5*/
 #section-e {
-	height: 30vh;
+	@include size(100%, 30vh)
 	background: $bg-primary;
 }
 /* end section 5 */
