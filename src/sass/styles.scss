@@ -72,18 +72,21 @@
 /* begin section 3 */
 
 .latest-work {
-@include height(600px, 600px)
-border-right: 10px solid #C7C6C6;
+	@include height(600px, 600px)
+	border-right: 10px solid black;
+
 }
 
-.wrapper a {
+#section-c .wrapper a {
 	@include height(600px, 600px)
 	@include flex(1, 100%, 10%)
 	transition: all 1s;
+	filter: grayscale(100%);
 }
 
-.wrapper a:hover {
+#section-c .wrapper a:hover {
 	flex: 6;
+	filter: grayscale(0%);
 }
 #section-c {
 	background: $bg-primary;
@@ -100,16 +103,16 @@ border-right: 10px solid #C7C6C6;
 }
 
 #work-1 {
-@include bgData(url(../img/tributepage3.png), cover, left, no-repeat, 1)
+	@include bgData(url(../img/tributepage3.png), cover, left, no-repeat, 1)
 }
 
 #work-2 {
-@include bgData(url(../img/mytwitch3.png), cover, left, no-repeat, 1)
+	@include bgData(url(../img/mytwitch3.png), cover, left, no-repeat, 1)
 }
 
 #work-3 {
-@include bgData(url(../img/moviehunt3.png), cover, left, no-repeat, 1)
-border-right: 10px solid black;
+	@include bgData(url(../img/moviehunt3.png), cover, left, no-repeat, 1)
+	border-right: 10px solid black;
 }
 
 /* end section 3 */

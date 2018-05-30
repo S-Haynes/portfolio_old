@@ -135,20 +135,24 @@ button {
 .latest-work {
   max-height: 600px;
   min-height: 600px;
-  border-right: 10px solid #C7C6C6; }
+  border-right: 10px solid black; }
 
-.wrapper a {
+#section-c .wrapper a {
   max-height: 600px;
   min-height: 600px;
   flex: 1;
   max-width: 100%;
   min-width: 10%;
-  transition: all 1s; }
+  transition: all 1s;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
 
-.wrapper a:hover {
+#section-c .wrapper a:hover {
   -webkit-box-flex: 6;
   -ms-flex: 6;
-  flex: 6; }
+  flex: 6;
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%); }
 
 #section-c {
   background: #1C1D25;
