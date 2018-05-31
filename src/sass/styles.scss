@@ -3,7 +3,6 @@
 @import 'base';
 
 /* section 1 */
-
 	.wrapper {
 	@include size(100%, 100%)
 	position: relative;
@@ -11,7 +10,6 @@
 	display: flex;
 	flex-wrap: wrap;	
 }
-
 
 .text-container {
 	@include pos(absolute, 30%, 20%)
@@ -55,47 +53,47 @@
 	opacity: 0.6;
 }
 /* end section 1 */
-
 /* begin section 2 */
 #section-b {
 	background: $bg-secondary;
+	padding-top: 50px;
 }
 
 #section-b .wrapper img {
 	@include flex(1, 30%, 30%)
 	@include height(200px, 200px)
-	margin: 10px;
-	
+	margin: 10px;	
+}
+
+#section-b h1 {
+	margin-left: 50px;
 }
 /* end section 2 */
-
-
 /* begin section 3 */
 
 .latest-work {
 	@include height(600px, 600px)
 	border-right: 10px solid black;
-
 }
 
 #section-c .wrapper a {
 	@include height(600px, 600px)
 	@include flex(1, 100%, 10%)
 	transition: all 1s;
-	filter: grayscale(100%);
 }
 
 #section-c .wrapper a:hover {
 	flex: 6;
-	filter: grayscale(0%);
 }
 #section-c {
 	background: $bg-primary;
 	@include size(100%, 950px)
+	padding-top: 50px;
 }
 
 #section-c h1 {
 	color: $bg-secondary;
+	margin-left: 50px;
 }
 
 #section-c .wrapper {
@@ -117,30 +115,56 @@
 }
 
 /* end section 3 */
-
-
 /* begin section 4 */
 .experiment {
 	@include height(300px, 200px);
 }
+.fa-flask {
+	transition: all 1s;
+}
+.fa-flask:hover {
+	color: steelblue;
+}
+
+#particles-js {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	opacity: 1;
+}
+
+.text-wrap{
+	width: 30%;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+
 #section-d {
+	position: relative;
 	background: $bg-secondary;
-	@include size(100%, 800px)
+	padding: 50px 50px 200px 50px;
+
 }
 
 #section-d .wrapper {
-	top: 15%;
-	@include size(50%, 50%)
+	margin-top: 100px;
+	@include size(60%, 50%)
 	justify-content: stretch;
+	z-index: 2;
+
 }
 
 #section-d .wrapper a {
 	@include height(200px, 200px)
-	@include flex(1, 30%, 300px)
+	@include flex(1, 33%, 300px)
 	transition: all 1s;
 	filter: grayscale(100%);
-	filter: grayscale(100%);
 
+	
 }
 
 #section-d .wrapper a div{
@@ -176,8 +200,6 @@
 }
 
 /*end section 4 */
-
-
 /* begin section 5*/
 #section-e {
 	@include size(100%, 250px)

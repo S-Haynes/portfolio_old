@@ -14,5 +14,8 @@
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
     "gulp-webserver": "^0.9.1"
+  },
+  "dependencies": {
+    "particles.js": "^2.0.0"
   }
 }
