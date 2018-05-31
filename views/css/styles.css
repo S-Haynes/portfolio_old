@@ -122,7 +122,7 @@ button {
 #section-b {
   background: #f3f3f3; }
 
-.wrapper img {
+#section-b .wrapper img {
   flex: 1;
   max-width: 30%;
   min-width: 30%;
@@ -191,16 +191,86 @@ button {
 
 /* end section 3 */
 /* begin section 4 */
+.experiment {
+  max-height: 300px;
+  min-height: 200px; }
+
 #section-d {
   background: #f3f3f3;
   width: 100%;
-  height: 75vh; }
+  height: 800px; }
+
+#section-d .wrapper {
+  top: 15%;
+  width: 50%;
+  height: 50%;
+  justify-content: stretch; }
+
+#section-d .wrapper a {
+  max-height: 200px;
+  min-height: 200px;
+  flex: 1;
+  max-width: 30%;
+  min-width: 300px;
+  transition: all 1s;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: grayscale(100%); }
+
+#section-d .wrapper a div {
+  border: 2px solid black; }
+
+#section-d .wrapper a:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%); }
+
+#experiment-1 {
+  background: url(../img/wiki.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1; }
+
+#experiment-2 {
+  background: url(../img/rps.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1; }
+
+#experiment-3 {
+  background: url(../img/rgb.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1; }
+
+#experiment-4 {
+  background: url(../img/js_slider.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1; }
+
+#experiment-5 {
+  background: url(../img/pomodoro.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1; }
+
+#experiment-6 {
+  background: url(../img/randomquotes.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1; }
 
 /*end section 4 */
 /* begin section 5*/
 #section-e {
   width: 100%;
-  height: 30vh;
+  height: 250px;
   background: #1C1D25; }
 
 /* end section 5 */
