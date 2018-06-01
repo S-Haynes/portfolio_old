@@ -5,6 +5,7 @@
 /* section 1 */
 	.wrapper {
 	@include size(100%, 100%)
+	text-align: center;
 	position: relative;
 	margin: 0 auto;
 	display: flex;
@@ -59,10 +60,55 @@
 	padding-top: 50px;
 }
 
-#section-b .wrapper img {
+#section-b .wrapper i {
 	@include flex(1, 30%, 30%)
-	@include height(200px, 200px)
-	margin: 10px;	
+	font-size: 200px;
+	margin: 20px;	
+}
+
+.fab {
+	transition: all 0.5s;
+}
+.fa-js-square:hover {
+	color: #FBF545;
+}
+
+.fa-html5:hover {
+	color: #F6601E;
+}
+
+.fa-css3-alt:hover {
+	color: steelblue;
+}
+
+.fa-node:hover {
+	color: #29FF60;
+}
+
+.fa-sass:hover {
+	color: #FF94C6;
+}
+
+.fa-gulp:hover {
+	color: #F35C3E;
+}
+
+.fa-git:hover {
+	color: #F6601E;
+}
+
+.fa-github:hover {
+	color: #EE60FB;
+}
+
+.fa-angular:hover {
+	color: #C3002F;
+}
+
+@media(max-width: 860px){
+	#section-b .wrapper i{
+		font-size: 100px;
+	}
 }
 
 #section-b h1 {
@@ -121,9 +167,11 @@
 }
 .fa-flask {
 	transition: all 1s;
+	font-size: 72px;
 }
 .fa-flask:hover {
 	color: steelblue;
+
 }
 
 #particles-js {
@@ -202,7 +250,29 @@
 /*end section 4 */
 /* begin section 5*/
 #section-e {
-	@include size(100%, 250px)
+	@include size(100%, 350px)
 	background: $bg-primary;
+	padding: 100px;
+}
+
+#footer {
+	@include size(500px, 100%)
+	color: white;
+	font-size: 32px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 2.0;
+	}
+
+#footer img{
+	@include size(100px, 100px)
+}
+#footer a{
+	margin: 0 20px;
+	}
+
+
+#copyright {
+	font-size: 16px;
 }
 /* end section 5 */
