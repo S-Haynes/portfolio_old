@@ -20,10 +20,13 @@
 }
 
 .text-container h1 {
+	font-family: Kreon;
+	font-weight: 700;
 	color: $bg-secondary;
 }
 
 .text-container h3 {
+	font-size: 24px;
 	margin-bottom: 30px;
 }
 
@@ -38,13 +41,16 @@
 	@include flex(1, 50%, 30%)
 }
 
-#brand-logo {
-	@include flex(3, 100%, 50%)
+#header-links a:hover {
 	color: white;
 }
 
+#brand-logo {
+	@include flex(3, 100%, 50%)
+}
+
 #logo-bg {
-	@include size(100%, 100%)
+	@include size(100%, 60%)
 	@include bgData(url(../img/logo.png), contain, center, no-repeat, 1)
 }
 
@@ -105,12 +111,6 @@
 	color: #C3002F;
 }
 
-@media(max-width: 860px){
-	#section-b .wrapper i{
-		font-size: 100px;
-	}
-}
-
 #section-b h1 {
 	margin-left: 50px;
 }
@@ -118,23 +118,24 @@
 /* begin section 3 */
 
 .latest-work {
-	@include height(600px, 600px)
+	@include height(800px, 800px)
 	border-right: 10px solid black;
 }
 
 #section-c .wrapper a {
-	@include height(600px, 600px)
+	@include height(800px, 800px)
 	@include flex(1, 100%, 10%)
-	transition: all 1s;
+	transition: flex 1.5s;
 }
 
 #section-c .wrapper a:hover {
-	flex: 6;
+	flex: 10;
 }
 #section-c {
 	background: $bg-primary;
-	@include size(100%, 950px)
+	@include size(100%, 1000px)
 	padding-top: 50px;
+	padding-bottom: 300px;
 }
 
 #section-c h1 {
@@ -143,8 +144,8 @@
 }
 
 #section-c .wrapper {
-	top: 20%;
-	@include height(600px, 600px)
+	top: 5%;
+	@include height(800px, 800px)
 }
 
 #work-1 {
@@ -252,7 +253,7 @@
 #section-e {
 	@include size(100%, 350px)
 	background: $bg-primary;
-	padding: 100px;
+	padding: 60px;
 }
 
 #footer {
@@ -262,17 +263,35 @@
 	margin: 0 auto;
 	text-align: center;
 	line-height: 2.0;
+
 	}
 
-#footer img{
+#footer img, #brand-logo img{
 	@include size(100px, 100px)
 }
 #footer a{
 	margin: 0 20px;
 	}
 
+#footer a:hover {
+	color: white
+	}
+
 
 #copyright {
+	font-family: Roboto;
 	font-size: 16px;
 }
 /* end section 5 */
+
+/* Media Queries */
+
+@media(max-width: 860px){
+	#section-b .wrapper i{
+		font-size: 100px;
+	}
+
+	h1, #section-d i{
+		font-size: 48px;
+	}
+}
