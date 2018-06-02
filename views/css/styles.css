@@ -186,7 +186,7 @@ button {
   flex: 1;
   max-width: 100%;
   min-width: 10%;
-  transition: flex 1.5s; }
+  transition: flex 1s; }
 
 #section-c .wrapper a:hover {
   -webkit-box-flex: 10;
@@ -350,7 +350,8 @@ button {
 
 #footer img, #brand-logo img {
   width: 100px;
-  height: 100px; }
+  height: 100px;
+  cursor: pointer; }
 
 #footer a {
   margin: 0 20px; }
