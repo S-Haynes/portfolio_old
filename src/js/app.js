@@ -40,24 +40,24 @@ window.addEventListener('load', function(){
 	})
 
 	function displayAbout(){
-		about_container.classList.remove('display');
+		about_container.classList.remove('hidden');
 		setTimeout(function(){
 			about_text.style.transform = "translateY(0%)";
 			contact_text.style.transform = "translateY(0%)";
 		}, 500)
 		setTimeout(function(){
 			about_container.style.transition = "box-shadow 0.3s"
-			about_container.style.boxShadow = "20px 20px 20px black";
+			about_container.classList.add('box-shadow');
 		}, 1000)
 	}
 
 	function hideAbout(){
 		about_container.style.transition = "box-shadow 0s"
-		about_container.style.boxShadow = "0px 0px 0px black";
+		about_container.classList.remove('box-shadow');
 		about_text.style.transform = "translateY(100%)";
 		contact_text.style.transform = "translateY(-100%)";
 		setTimeout(function(){
-			about_container.classList.add('display');
+			about_container.classList.add('hidden');
 		}, 1000)
 	}
 

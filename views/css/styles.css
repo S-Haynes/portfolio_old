@@ -37,6 +37,9 @@ nav {
   margin-bottom: 80px; }
 
 li {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  -moz-flex: 1;
   flex: 1;
   max-width: 30%;
   min-width: 30%;
@@ -63,17 +66,23 @@ button {
   letter-spacing: 3px; }
 
 /* section 1 */
+.box-shadow {
+  -webkit-box-shadow: 20px 20px 20px black;
+  box-shadow: 20px 20px 20px black; }
+
 .wrapper {
   width: 100%;
   height: 100%;
   text-align: center;
-  position: relative;
   margin: 0 auto;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  position: relative; }
 
 .text-container {
   position: absolute;
@@ -100,13 +109,14 @@ button {
   width: 61%;
   height: 75%;
   z-index: 100;
+  -webkit-border-radius: 20px;
   border-radius: 20px;
   -webkit-transition: -webkit-box-shadow 0.3s;
   transition: -webkit-box-shadow 0.3s;
   transition: box-shadow 0.3s;
   transition: box-shadow 0.3s, -webkit-box-shadow 0.3s; }
 
-.display {
+.hidden {
   display: none; }
 
 #about-container h3 {
@@ -175,6 +185,9 @@ button {
   height: 1000px; }
 
 #header-links {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  -moz-flex: 1;
   flex: 1;
   max-width: 50%;
   min-width: 30%; }
@@ -183,6 +196,9 @@ button {
   color: white; }
 
 #brand-logo {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  -moz-flex: 3;
   flex: 3;
   max-width: 100%;
   min-width: 50%; }
@@ -205,12 +221,16 @@ button {
 /* end section 1 */
 /* begin section 2 */
 #section-b {
+  width: 100%;
   background: #f3f3f3;
   padding-top: 50px; }
 
 #section-b .wrapper i {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  -moz-flex: 1;
   flex: 1;
-  max-width: 30%;
+  max-width: 50%;
   min-width: 30%;
   font-size: 200px;
   margin: 20px; }
@@ -259,6 +279,9 @@ button {
 #section-c .wrapper a {
   max-height: 800px;
   min-height: 800px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  -moz-flex: 1;
   flex: 1;
   max-width: 100%;
   min-width: 10%;
@@ -266,6 +289,7 @@ button {
 
 #section-c .wrapper a:hover {
   -webkit-box-flex: 10;
+  -webkit-flex: 10;
   -ms-flex: 10;
   flex: 10; }
 
@@ -331,12 +355,13 @@ button {
   opacity: 1; }
 
 .text-wrap {
-  width: 30%;
+  width: 100%;
   text-align: center;
   position: relative;
   z-index: 2; }
 
 #section-d {
+  width: 100%;
   position: relative;
   background: #f3f3f3;
   padding: 50px 50px 200px 50px; }
@@ -351,10 +376,13 @@ button {
 #section-d .wrapper a {
   max-height: 200px;
   min-height: 200px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  -moz-flex: 1;
   flex: 1;
-  max-width: 33%;
+  max-width: 50%;
   min-width: 300px;
-  transition: all 1s;
+  transition: filter 1s;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%); }
 
@@ -416,7 +444,7 @@ button {
   padding: 60px; }
 
 #footer {
-  width: 500px;
+  width: 100%;
   height: 100%;
   color: white;
   font-size: 32px;
@@ -441,14 +469,119 @@ button {
 
 /* end section 5 */
 /* Media Queries */
+@media (max-width: 1600px) {
+  .about-text-container i {
+    margin-top: 20px;
+    font-size: 50px;
+    width: 15%; } }
+
+@media (max-width: 1200px) {
+  #section-c {
+    width: 100%;
+    height: 1500px; }
+  #section-c .wrapper {
+    display: block; }
+  #section-c .wrapper a {
+    max-height: 400px;
+    min-height: 400px;
+    width: 100%;
+    height: 400px; }
+  .latest-work {
+    max-height: 400px;
+    min-height: 400px;
+    width: 100%;
+    margin-top: 10px;
+    border-right: 10px solid black; }
+  #work-1, #work-2, #work-3 {
+    background-size: 100% 100%; }
+  #section-d .wrapper a {
+    max-height: 300px;
+    min-height: 300px;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    -moz-flex: 1;
+    flex: 1;
+    max-width: 100%;
+    min-width: 100%;
+    transition: all 1s;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); }
+  .experiment {
+    max-height: 300px;
+    min-height: 300px; }
+  #experiment-1, #experiment-2, #experiment-3, #experiment-4, #experiment-5, #experiment-6 {
+    background-size: 100% 100%; }
+  #about-text {
+    position: relative;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #f3f3f3;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out; }
+  #contact-text {
+    color: #f3f3f3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #232323;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out; }
+  .about-text-container {
+    padding: 5px 50px; }
+  .about-text-container p {
+    font-size: 16px; } }
+
 @media (max-width: 860px) {
   #section-b .wrapper i {
     font-size: 100px; }
   h1, #section-d i {
-    font-size: 48px; } }
+    font-size: 48px; }
+  #section-d .wrapper {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    width: 100%;
+    height: 50%;
+    z-index: 2; }
+  #particles-js {
+    display: none; }
+  #about-container {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    -webkit-border-radius: 0px;
+    border-radius: 0px; }
+  #about-container h3 {
+    font-size: 30px; }
+  .box-shadow {
+    -webkit-box-shadow: 0px 0px 0px black;
+    box-shadow: 0px 0px 0px black; }
+  #section-d {
+    padding: 50px 0px 200px 0px; } }
 
-@media (max-width: 1600px) {
-  #section-a i {
-    margin-top: 20px;
-    font-size: 50px;
-    width: 15%; } }
+@media (max-width: 615px) {
+  #section-e {
+    padding: 0px;
+    padding-top: 50px; }
+  #footer {
+    font-size: 24px; }
+  #footer img, #brand-logo img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer; }
+  #footer a {
+    margin: 0 5px; } }

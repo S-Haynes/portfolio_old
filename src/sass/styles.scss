@@ -3,13 +3,18 @@
 @import 'base';
 
 /* section 1 */
+
+.box-shadow {
+	box-shadow: 20px 20px 20px black;
+}
+
 .wrapper {
 	@include size(100%, 100%)
 	text-align: center;
-	position: relative;
 	margin: 0 auto;
 	display: flex;
-	flex-wrap: wrap;	
+	flex-wrap: wrap;
+	position: relative;	
 }
 
 .text-container {
@@ -39,7 +44,7 @@
 	transition: box-shadow 0.3s;
 }
 
-.display {
+.hidden {
 	display: none;
 }
 
@@ -130,14 +135,15 @@
 /* end section 1 */
 /* begin section 2 */
 #section-b {
+	width: 100%;
 	background: $bg-secondary;
 	padding-top: 50px;
 }
 
 #section-b .wrapper i {
-	@include flex(1, 30%, 30%)
+	@include flex(1, 50%, 30%)
 	font-size: 200px;
-	margin: 20px;	
+	margin: 20px; 
 }
 
 .fab {
@@ -254,13 +260,14 @@
 }
 
 .text-wrap{
-	width: 30%;
+	width: 100%;
 	text-align: center;
 	position: relative;
 	z-index: 2;
 }
 
 #section-d {
+	width: 100%;
 	position: relative;
 	background: $bg-secondary;
 	padding: 50px 50px 200px 50px;
@@ -277,8 +284,8 @@
 
 #section-d .wrapper a {
 	@include height(200px, 200px)
-	@include flex(1, 33%, 300px)
-	transition: all 1s;
+	@include flex(1, 50%, 300px)
+	transition: filter 1s;
 	filter: grayscale(100%);
 
 	
@@ -325,13 +332,12 @@
 }
 
 #footer {
-	@include size(500px, 100%)
+	@include size(100%, 100%)
 	color: white;
 	font-size: 32px;
 	margin: 0 auto;
 	text-align: center;
 	line-height: 2.0;
-
 	}
 
 #footer img, #brand-logo img{
@@ -354,6 +360,86 @@
 /* end section 5 */
 
 /* Media Queries */
+@media(max-width: 1600px){
+	.about-text-container i {
+		margin-top: 20px;
+		font-size: 50px;
+		width: 15%;
+	}
+}
+
+
+@media(max-width: 1200px){
+
+	#section-c {
+		@include size(100%, 1500px)
+	}
+	#section-c .wrapper {
+		display: block;
+	}
+
+	#section-c .wrapper a {
+	@include height(400px, 400px)
+	@include size(100%, 400px)
+}
+
+.latest-work {
+	@include height(400px, 400px)
+	width: 100%;
+	margin-top: 10px;
+	border-right: 10px solid black;
+}
+
+#work-1, #work-2, #work-3 {
+	background-size: 100% 100%;
+}
+
+#section-d .wrapper a {
+	@include height(300px, 300px)
+	@include flex(1, 100%, 100%)
+	transition: all 1s;
+	filter: grayscale(100%);
+}
+
+.experiment {
+	@include height(300px, 300px);
+
+}
+
+#experiment-1, #experiment-2, #experiment-3, #experiment-4, #experiment-5, #experiment-6{
+	background-size: 100% 100%;
+}
+
+#about-text {
+	@include pos(relative, 50%, 0)
+	@include size(100%, 50%)
+	background: $bg-secondary;
+	transform: translateY(100%);
+	transition: transform 0.5s ease-in-out;
+}
+
+#contact-text {
+	color: $bg-secondary;
+	@include pos(absolute, 0, 0)
+	@include size(100%, 50%)
+	background: #232323;
+	transform: translateY(-100%);
+	transition: transform 0.5s ease-in-out;
+}
+
+.about-text-container {
+	padding: 5px 50px;
+
+}
+
+.about-text-container p {
+	font-size: 16px;
+}
+
+
+}
+
+
 
 @media(max-width: 860px){
 
@@ -365,13 +451,57 @@
 		font-size: 48px;
 	}
 
+#section-d .wrapper {
+	justify-content: space-around;
+	@include size(100%, 50%)
+	z-index: 2;
+}
+
+#particles-js {
+	display: none;
+}
+
+#about-container {
+	@include pos(absolute, 130px, 0)
+	@include size(100%, 85%);
+	border-radius: 0px;
+}
+
+#about-container h3 {
+	font-size: 30px;
+}
+
+
+.box-shadow {
+	box-shadow: 0px 0px 0px black;
+}
+
+#section-d {
+	padding: 50px 0px 200px 0px;
 
 }
 
-@media(max-width: 1600px){
-	#section-a i {
-		margin-top: 20px;
-		font-size: 50px;
-		width: 15%;
+}
+
+@media(max-width: 615px){
+
+#section-e {
+	padding: 0px;
+	padding-top: 50px;
+}
+
+#footer {
+	font-size: 24px;
 	}
+
+#footer img, #brand-logo img{
+	@include size(100px, 100px)
+	cursor: pointer;
 }
+#footer a{
+	margin: 0 5px;
+	}
+
+}
+
+

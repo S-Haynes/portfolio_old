@@ -17,7 +17,7 @@ gulp.task('copyHtml', function(){
 gulp.task('sass', function(){
 	gulp.src('src/sass/*.scss')
 		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
+			browsers: ['last 2 versions', 'Safari >= 1'],
 			cascade: false,
 		}))
 		.pipe(sass().on('error', sass.logError))

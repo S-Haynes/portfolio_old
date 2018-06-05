@@ -1,6 +1,9 @@
 // SASS MIXINS
 
 @mixin flex($flex, $max-width, $min-width){
+	-webkit-flex: $flex;
+	-ms-flex: $flex;
+	-moz-flex: $flex;
 	flex: $flex;
 	max-width: $max-width;
 	min-width: $min-width;
