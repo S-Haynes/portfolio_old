@@ -383,58 +383,58 @@
 	@include size(100%, 400px)
 }
 
-.latest-work {
-	@include height(400px, 400px)
-	width: 100%;
-	margin-top: 10px;
-	border-right: 10px solid black;
-}
+	.latest-work {
+		@include height(400px, 400px)
+		width: 100%;
+		margin-top: 10px;
+		border-right: 10px solid black;
+	}
 
-#work-1, #work-2, #work-3 {
-	background-size: 100% 100%;
-}
+	#work-1, #work-2, #work-3 {
+		background-size: 100% 100%;
+	}
 
-#section-d .wrapper a {
-	@include height(300px, 300px)
-	@include flex(1, 100%, 100%)
-	transition: all 1s;
-	filter: grayscale(100%);
-}
+	#section-d .wrapper a {
+		@include height(300px, 300px)
+		@include flex(1, 100%, 100%)
+		transition: all 1s;
+		filter: grayscale(100%);
+	}
 
-.experiment {
-	@include height(300px, 300px);
+	.experiment {
+		@include height(300px, 300px);
 
-}
+	}
 
-#experiment-1, #experiment-2, #experiment-3, #experiment-4, #experiment-5, #experiment-6{
-	background-size: 100% 100%;
-}
+	#experiment-1, #experiment-2, #experiment-3, #experiment-4, #experiment-5, #experiment-6{
+		background-size: 100% 100%;
+	}
 
-#about-text {
-	@include pos(relative, 50%, 0)
-	@include size(100%, 50%)
-	background: $bg-secondary;
-	transform: translateY(100%);
-	transition: transform 0.5s ease-in-out;
-}
+	#about-text {
+		@include pos(relative, 50%, 0)
+		@include size(100%, 50%)
+		background: $bg-secondary;
+		transform: translateY(100%);
+		transition: transform 0.5s ease-in-out;
+	}
 
-#contact-text {
-	color: $bg-secondary;
-	@include pos(absolute, 0, 0)
-	@include size(100%, 50%)
-	background: #232323;
-	transform: translateY(-100%);
-	transition: transform 0.5s ease-in-out;
-}
+	#contact-text {
+		color: $bg-secondary;
+		@include pos(absolute, 0, 0)
+		@include size(100%, 50%)
+		background: #232323;
+		transform: translateY(-100%);
+		transition: transform 0.5s ease-in-out;
+	}
 
-.about-text-container {
-	padding: 5px 50px;
+	.about-text-container {
+		padding: 5px 50px;
 
-}
+	}
 
-.about-text-container p {
-	font-size: 16px;
-}
+	.about-text-container p {
+		font-size: 16px;
+	}
 
 
 }
@@ -504,4 +504,12 @@
 
 }
 
+@media(max-width: 420px){
+	.about-text-container p{
+		font-size: 12px;
+	}
+	.about-text-container i{
+		font-size: 30px;
+	}
+}
 

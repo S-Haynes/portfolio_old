@@ -585,3 +585,9 @@ button {
     cursor: pointer; }
   #footer a {
     margin: 0 5px; } }
+
+@media (max-width: 420px) {
+  .about-text-container p {
+    font-size: 12px; }
+  .about-text-container i {
+    font-size: 30px; } }
