@@ -240,7 +240,7 @@
 #section-b .wrapper i {
 	@include flex(1, 50%, 30%)
 	font-size: 200px;
-	margin: 20px; 
+	margin: 20px 20px 20px 0px; 
 }
 
 .fab {
@@ -279,8 +279,8 @@
 	color: #EE60FB;
 }
 
-.fa-angular:hover {
-	color: #C3002F;
+.fa-react:hover {
+	color: #53C1DE;
 }
 
 #section-b h1 {
@@ -613,13 +613,3 @@
 		font-size: 80px;
 	}
 }
-
-@media(max-width: 420px){
-	.about-text-container p{
-		font-size: 12px;
-	}
-	.about-text-container i{
-		font-size: 30px;
-	}
-}
-

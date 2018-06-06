@@ -376,7 +376,7 @@ button:active {
   max-width: 50%;
   min-width: 30%;
   font-size: 200px;
-  margin: 20px; }
+  margin: 20px 20px 20px 0px; }
 
 .fab {
   -webkit-transition: all 0.5s;
@@ -406,8 +406,8 @@ button:active {
 #section-b .fa-github:hover {
   color: #EE60FB; }
 
-.fa-angular:hover {
-  color: #C3002F; }
+.fa-react:hover {
+  color: #53C1DE; }
 
 #section-b h1 {
   margin-left: 50px; }
@@ -739,9 +739,3 @@ button:active {
     margin: 0 5px; }
   #dropdown-links {
     font-size: 80px; } }
-
-@media (max-width: 420px) {
-  .about-text-container p {
-    font-size: 12px; }
-  .about-text-container i {
-    font-size: 30px; } }
