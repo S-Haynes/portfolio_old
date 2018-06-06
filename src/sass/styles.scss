@@ -3,7 +3,6 @@
 @import 'base';
 
 /* section 1 */
-
 #header-links li {
 	@include flex(1, 33%, 33%)
 	list-style: none;
@@ -24,7 +23,6 @@
 	width: 100px;
 	height: 300px;
 	z-index: 20;
-
 }
 
 #header-right-links a {
@@ -60,7 +58,6 @@
 	cursor: pointer;
 }
 
-
 #dropdown-info ul{
 	@include size(60%, 50%)
 	display: flex;
@@ -68,7 +65,6 @@
 	justify-content: center;
 	text-align: left;
 	margin: auto;
-
 }
 
 #dropdown-info li {
@@ -82,7 +78,6 @@
 #dropdown-info a{
 	color: white;
 }
-
 
 #dropdown-close {
 	position: absolute;
@@ -165,7 +160,6 @@
 .about-text-container {
 	@include size(100%, 100%)
 	padding: 100px 50px;
-
 }
 
 .life-story{
@@ -179,7 +173,6 @@
 	margin: 2%;
 	margin-top: 100px;
 }
-
 
 #about-text {
 	@include pos(relative, 0, 0)
@@ -198,8 +191,6 @@
 	transition: transform 0.5s ease-in-out;
 }
 
-
-
 #close-button {
 	font-size: 32px;
 	position: absolute;
@@ -212,7 +203,6 @@
 #close-button:hover{
 	font-size: 40px;
 }
-
 
 #section-a {
 	position: relative;
@@ -256,6 +246,7 @@
 .fab {
 	transition: all 0.5s;
 }
+
 .fa-js-square:hover {
 	color: #FDD93D;
 }
@@ -347,13 +338,14 @@
 .experiment {
 	@include height(300px, 200px);
 }
+
 .fa-flask {
 	transition: all 1s;
 	font-size: 72px;
 }
+
 .fa-flask:hover {
 	color: steelblue;
-
 }
 
 #particles-js {
@@ -378,7 +370,6 @@
 	position: relative;
 	background: $bg-secondary;
 	padding: 50px 50px 200px 50px;
-
 }
 
 #section-d .wrapper {
@@ -386,7 +377,6 @@
 	@include size(60%, 50%)
 	justify-content: stretch;
 	z-index: 2;
-
 }
 
 #section-d .wrapper a {
@@ -394,8 +384,6 @@
 	@include flex(1, 50%, 300px)
 	transition: filter 1s;
 	filter: grayscale(100%);
-
-	
 }
 
 #section-d .wrapper a div{
@@ -429,7 +417,6 @@
 #experiment-6 {
 	@include bgData(url(../img/randomquotes.png), cover, center, no-repeat, 1)
 }
-
 /*end section 4 */
 /* begin section 5*/
 #section-e {
@@ -451,9 +438,10 @@
 	@include size(100px, 100px)
 	cursor: pointer;
 }
+
 #footer a{
 	margin: 0 20px;
-	}
+}
 
 
 #copyright {
@@ -471,12 +459,11 @@
 	}
 }
 
-
 @media(max-width: 1200px){
-
 	#section-c {
 		@include size(100%, 1500px)
 	}
+
 	#section-c .wrapper {
 		display: block;
 	}
@@ -484,7 +471,7 @@
 	#section-c .wrapper a {
 	@include height(400px, 400px)
 	@include size(100%, 400px)
-}
+	}
 
 	.latest-work {
 		@include height(400px, 400px)
@@ -538,8 +525,6 @@
 	.about-text-container p {
 		font-size: 16px;
 	}
-
-
 }
 
 
@@ -557,81 +542,76 @@
 		font-size: 48px;
 	}
 
-#section-d .wrapper {
-	justify-content: space-around;
-	@include size(100%, 50%)
-	z-index: 2;
-}
+	#section-d .wrapper {
+		justify-content: space-around;
+		@include size(100%, 50%)
+		z-index: 2;
+	}
 
-#particles-js {
-	display: none;
-}
+	#particles-js {
+		display: none;
+	}
 
-#about-container {
-	@include pos(absolute, 130px, 0)
-	@include size(100%, 85%);
-	border-radius: 0px;
-}
+	#about-container {
+		@include pos(absolute, 130px, 0)
+		@include size(100%, 85%);
+		border-radius: 0px;
+	}
 
-#about-container h3 {
-	font-size: 30px;
-}
+	#about-container h3 {
+		font-size: 30px;
+	}
 
+	.box-shadow {
+		box-shadow: 0px 0px 0px black;
+	}
 
-.box-shadow {
-	box-shadow: 0px 0px 0px black;
-}
+	#section-d {
+		padding: 50px 0px 200px 0px;
 
-#section-d {
-	padding: 50px 0px 200px 0px;
+	}
 
-}
+	#dropdown {
+		display: block;
+	}
 
-#dropdown {
-	display: block;
-}
-
-#header-right-links {
-	display: none;
-}
-
+	#header-right-links {
+		display: none;
+	}
 }
 
 @media (min-width: 860px){
-#dropdown-info {
-	display: none;
-}
+	#dropdown-info {
+		display: none;
+	}
 
-#dropdown-info-underlay {
-	display: none;
+	#dropdown-info-underlay {
+		display: none;
 	}
 }
-
 
 @media(max-width: 615px){
-
-#section-e {
-	padding: 0px;
-	padding-top: 50px;
-}
-
-#footer {
-	font-size: 24px;
+	#section-e {
+		padding: 0px;
+		padding-top: 50px;
 	}
 
-#footer img, #brand-logo img{
-	@include size(100px, 100px)
-	cursor: pointer;
-}
-#footer a{
-	margin: 0 5px;
+	#footer {
+		font-size: 24px;
 	}
 
-#dropdown-links {
-	font-size: 80px;
-}
+	#footer img, #brand-logo img{
+		@include size(100px, 100px)
+		cursor: pointer;
+	}
 
+	#footer a{
+		margin: 0 5px;
+	}
 
+	#dropdown-links {
+		font-size: 80px;
+	}
 }
 
 @media(max-width: 420px){
@@ -641,6 +621,5 @@
 	.about-text-container i{
 		font-size: 30px;
 	}
-
 }
 
