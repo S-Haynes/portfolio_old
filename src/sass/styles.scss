@@ -4,6 +4,78 @@
 
 /* section 1 */
 
+#header-links li {
+	@include flex(1, 33%, 33%)
+	list-style: none;
+	margin-right: 100px;
+}
+
+#header-links ul {
+	display: flex;
+	justify-content: flex-end;
+}
+
+
+#dropdown-info{
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include size(100%, 100%);
+	background: linear-gradient(to right, #111D3E 1%, $brand-primary);
+	z-index: 200;
+	display: flex;
+	transform: translateX(-100%);
+	transition: transform 0.5s ease-in-out;
+}
+
+#dropdown {
+	position: absolute;
+	font-size: 75px;
+	right: 50px;
+	color: white;
+	display: none;
+	cursor: pointer;
+}
+
+
+#dropdown-info ul{
+	@include size(60%, 50%)
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: left;
+	margin: auto;
+
+}
+
+#dropdown-info li {
+	font-size: 72px;
+	@include flex(1, 100%, 100%)
+	list-style: none;
+} 
+
+#dropdown-info a{
+	color: white;
+}
+
+
+#dropdown-close {
+	position: absolute;
+	top: 0;
+	right: 20px;
+	font-size: 100px;
+	cursor: pointer;
+}
+
+#dropdown-info-underlay {
+	@include pos(absolute, 0, 0)
+	@include size(100%, 100%)
+	background: $brand-secondary;
+	z-index: 150;
+	transform: translateX(-100%);
+	transition: transform 0.5s ease-in-out;
+}
+
 .box-shadow {
 	box-shadow: 20px 20px 20px black;
 }
@@ -96,6 +168,7 @@
 	right: 10px;
 	top: 10px;
 	transition: font-size 0.3s ease-in;
+	cursor: pointer;
 }
 
 #close-button:hover{
@@ -112,10 +185,6 @@
 
 #header-links {
 	@include flex(1, 50%, 30%)
-}
-
-#header-links a:hover {
-	color: white;
 }
 
 #brand-logo {
@@ -150,7 +219,7 @@
 	transition: all 0.5s;
 }
 .fa-js-square:hover {
-	color: #FBF545;
+	color: #FDD93D;
 }
 
 .fa-html5:hover {
@@ -162,7 +231,7 @@
 }
 
 .fa-node:hover {
-	color: #29FF60;
+	color: #3E863D;
 }
 
 .fa-sass:hover {
@@ -348,10 +417,6 @@
 	margin: 0 20px;
 	}
 
-#footer a:hover {
-	color: white
-	}
-
 
 #copyright {
 	font-family: Roboto;
@@ -442,6 +507,9 @@
 
 
 @media(max-width: 860px){
+	#header-links ul {
+		display: none;
+	}
 
 	#section-b .wrapper i{
 		font-size: 100px;
@@ -481,7 +549,22 @@
 
 }
 
+#dropdown {
+	display: block;
 }
+
+}
+
+@media (min-width: 860px){
+#dropdown-info {
+	display: none;
+}
+
+#dropdown-info-underlay {
+	display: none;
+	}
+}
+
 
 @media(max-width: 615px){
 
