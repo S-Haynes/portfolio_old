@@ -82,6 +82,36 @@ button:active {
   -ms-flex-pack: end;
   justify-content: flex-end; }
 
+#header-right-links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 30%;
+  right: 20px;
+  width: 100px;
+  height: 300px;
+  z-index: 20; }
+
+#header-right-links a {
+  color: #f3f3f3;
+  opacity: 0.5;
+  font-size: 72px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  -moz-flex: 1;
+  flex: 1;
+  max-width: 100%;
+  min-width: 100%; }
+
+#header-right-links a:hover {
+  opacity: 1;
+  color: white; }
+
 #dropdown-info {
   position: absolute;
   top: 0;
@@ -126,6 +156,8 @@ button:active {
   margin: auto; }
 
 #dropdown-info li {
+  font-family: Kreon;
+  font-weight: 700;
   font-size: 72px;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -144,6 +176,25 @@ button:active {
   right: 20px;
   font-size: 100px;
   cursor: pointer; }
+
+#dropdown-links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 100px;
+  left: 20%;
+  font-size: 100px; }
+
+#dropdown-links a {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  -moz-flex: 1;
+  flex: 1;
+  max-width: 33%;
+  min-width: 33%;
+  margin-right: 20px; }
 
 #dropdown-info-underlay {
   position: absolute;
@@ -352,7 +403,7 @@ button:active {
 .fa-git:hover {
   color: #F6601E; }
 
-.fa-github:hover {
+#section-b .fa-github:hover {
   color: #EE60FB; }
 
 .fa-angular:hover {
@@ -664,7 +715,9 @@ button:active {
   #section-d {
     padding: 50px 0px 200px 0px; }
   #dropdown {
-    display: block; } }
+    display: block; }
+  #header-right-links {
+    display: none; } }
 
 @media (min-width: 860px) {
   #dropdown-info {
@@ -683,7 +736,9 @@ button:active {
     height: 100px;
     cursor: pointer; }
   #footer a {
-    margin: 0 5px; } }
+    margin: 0 5px; }
+  #dropdown-links {
+    font-size: 80px; } }
 
 @media (max-width: 420px) {
   .about-text-container p {
