@@ -613,4 +613,16 @@
 	#dropdown-links {
 		font-size: 60px;
 	}
+
+}
+
+@media(max-width: 420px){
+.about-text-container p{
+	font-size: 14px; 
+}
+
+.about-text-container i{
+	font-size: 30px;
+}
+
 }
