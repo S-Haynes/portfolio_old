@@ -98,6 +98,7 @@
 #dropdown-links a {
 	@include flex(1, 33%, 33%)
 	margin-right: 20px;
+	transition: font-size 0s;
 }
 
 #dropdown-info-underlay {
@@ -243,7 +244,7 @@
 	margin: 20px 20px 20px 0px; 
 }
 
-.fab {
+.skill-icon {
 	transition: all 0.5s;
 }
 
@@ -610,6 +611,6 @@
 	}
 
 	#dropdown-links {
-		font-size: 80px;
+		font-size: 60px;
 	}
 }

@@ -194,7 +194,9 @@ button:active {
   flex: 1;
   max-width: 33%;
   min-width: 33%;
-  margin-right: 20px; }
+  margin-right: 20px;
+  -webkit-transition: font-size 0s;
+  transition: font-size 0s; }
 
 #dropdown-info-underlay {
   position: absolute;
@@ -378,7 +380,7 @@ button:active {
   font-size: 200px;
   margin: 20px 20px 20px 0px; }
 
-.fab {
+.skill-icon {
   -webkit-transition: all 0.5s;
   transition: all 0.5s; }
 
@@ -738,4 +740,4 @@ button:active {
   #footer a {
     margin: 0 5px; }
   #dropdown-links {
-    font-size: 80px; } }
+    font-size: 60px; } }
