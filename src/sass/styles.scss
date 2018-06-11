@@ -292,7 +292,7 @@
 
 .latest-work {
 	@include height(800px, 800px)
-	border-right: 10px solid black;
+	border-right: 5px solid #333;
 }
 
 #section-c .wrapper a {
@@ -331,8 +331,12 @@
 
 #work-3 {
 	@include bgData(url(../img/moviehunt3.png), cover, left, no-repeat, 1)
-	border-right: 10px solid black;
 }
+
+#work-4 {
+	@include bgData(url(../img/simon3.png), cover, center, no-repeat, 1)
+}
+
 
 /* end section 3 */
 /* begin section 4 */
@@ -462,7 +466,7 @@
 
 @media(max-width: 1200px){
 	#section-c {
-		@include size(100%, 1500px)
+		@include size(100%, 1900px)
 	}
 
 	#section-c .wrapper {
@@ -478,10 +482,10 @@
 		@include height(400px, 400px)
 		width: 100%;
 		margin-top: 10px;
-		border-right: 10px solid black;
 	}
 
-	#work-1, #work-2, #work-3 {
+	#work-1, #work-2, #work-3, #work-4 {
+		border-right: none;
 		background-size: 100% 100%;
 	}
 
