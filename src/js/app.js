@@ -60,9 +60,9 @@ window.addEventListener('load', function(){
 	})
 	dropdown_close.addEventListener('click', function(){
 		
-		dropdown_info.style.transform = "translateX(-105%)";
+		dropdown_info.style.transform = "translateX(-110%)";
 		setTimeout(function(){
-			dropdown_underlay.style.transform = "translateX(-105%)";
+			dropdown_underlay.style.transform = "translateX(-110%)";
 		}, 200)
 		
 		setTimeout(function(){
