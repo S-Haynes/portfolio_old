@@ -44,8 +44,8 @@
 	@include size(100%, 100%);
 	background: linear-gradient(to right, #111D3E 1%, $brand-primary);
 	z-index: 200;
-	display: flex;
-	transform: translateX(-110%);
+	display: none;
+	transform: translateX(-105%);
 	transition: transform 0.5s ease-in-out;
 }
 
@@ -106,8 +106,9 @@
 	@include size(100%, 100%)
 	background: $brand-secondary;
 	z-index: 150;
-	transform: translateX(-110%);
+	transform: translateX(-105%);
 	transition: transform 0.5s ease-in-out;
+	display: none;
 }
 
 .box-shadow {

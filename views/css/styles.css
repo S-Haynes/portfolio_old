@@ -122,12 +122,9 @@ button:active {
   background: -webkit-linear-gradient(left, #111D3E 1%, #21549D);
   background: linear-gradient(to right, #111D3E 1%, #21549D);
   z-index: 200;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transform: translateX(-110%);
-  transform: translateX(-110%);
+  display: none;
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
@@ -206,12 +203,13 @@ button:active {
   height: 100%;
   background: #EF5944;
   z-index: 150;
-  -webkit-transform: translateX(-110%);
-  transform: translateX(-110%);
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out; }
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  display: none; }
 
 .box-shadow {
   -webkit-box-shadow: 20px 20px 20px black;

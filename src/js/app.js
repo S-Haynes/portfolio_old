@@ -47,8 +47,8 @@ window.addEventListener('load', function(){
 	});
 
 	dropdown.addEventListener('click', function(){
-		dropdown_info.classList.remove('hidden');
-		dropdown_underlay.classList.remove('hidden');
+		dropdown_info.style.display = "flex";
+		dropdown_underlay.style.display = "flex";
 		setTimeout(function(){
 			dropdown_underlay.style.transform = "translateX(0%)"
 		}, 200)
@@ -66,8 +66,8 @@ window.addEventListener('load', function(){
 		}, 200)
 		
 		setTimeout(function(){
-			dropdown_info.classList.add('hidden');
-			dropdown_underlay.classList.add('hidden');
+			dropdown_info.style.display = "none";
+			dropdown_underlay.style.display = "none";
 		}, 800)
 
 	})
